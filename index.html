@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PaddleUp | Pickleball in Iligan</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f2;
+            color: #172018;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #123c2a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f5c542;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(18, 60, 42, 0.88),
+                    rgba(18, 60, 42, 0.88)
+                ),
+                #2d704d;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 35px;
+            color: #f1f5ef;
+        }
+
+        .button {
+            display: inline-block;
+            background: #f5c542;
+            color: #172018;
+            padding: 15px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #ffd866;
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+
+        .section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #123c2a;
+        }
+
+        .section-subtitle {
+            max-width: 600px;
+            margin: 0 auto 45px;
+            color: #5b635d;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 14px;
+            width: 270px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #123c2a;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #606860;
+        }
+
+        /* PRICING */
+
+        .pricing {
+            background: #e9efe7;
+        }
+
+        .price-card {
+            background: white;
+            max-width: 400px;
+            margin: 30px auto 0;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            color: #123c2a;
+            margin: 10px 0;
+        }
+
+        .price-description {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* BOOKING */
+
+        .booking {
+            background: #123c2a;
+            color: white;
+        }
+
+        .booking h2 {
+            color: white;
+        }
+
+        .booking p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #dce7df;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b271b;
+            color: #b9c7bd;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 60px 6%;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            PaddleUp
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#booking">Book</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Let's Play Pickleball.
+            </h1>
+
+            <p>
+                Your place to play, compete, and have fun in Iligan City.
+            </p>
+
+            <a href="#booking" class="button">
+                Book a Court
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section" id="about">
+
+        <h2>
+            Welcome to PaddleUp
+        </h2>
+
+        <p class="section-subtitle">
+            A place for pickleball players of all levels.
+            Bring your friends, grab your paddle, and enjoy the game.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🏓
+                </div>
+
+                <h3>
+                    5 Courts
+                </h3>
+
+                <p>
+                    Five courts available for games,
+                    practice sessions, and friendly matches.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💰
+                </div>
+
+                <h3>
+                    ₱350 / Hour
+                </h3>
+
+                <p>
+                    Simple and affordable court rental
+                    at ₱350 per court per hour.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Iligan City
+                </h3>
+
+                <p>
+                    Your local pickleball destination
+                    in Iligan, Philippines.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section class="section pricing" id="pricing">
+
+        <h2>
+            Simple Pricing
+        </h2>
+
+        <p class="section-subtitle">
+            No complicated pricing. Just book a court and play.
+        </p>
+
+
+        <div class="price-card">
+
+            <h3>
+                Court Rental
+            </h3>
+
+            <div class="price">
+                ₱350
+            </div>
+
+            <p class="price-description">
+                Per court / hour
+            </p>
+
+            <a href="#booking" class="button">
+                Reserve a Court
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING -->
+
+    <section class="section booking" id="booking">
+
+        <h2>
+            Ready to Play?
+        </h2>
+
+        <p>
+            Online court booking is coming soon.
+            Soon you'll be able to choose your date,
+            court, and time directly through PaddleUp.
+        </p>
+
+        <a href="#" class="button">
+            Book a Court
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 PaddleUp · Iligan City, Philippines
+        </p>
+
+    </footer>
+
+</body>
+</html>
