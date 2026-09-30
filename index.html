@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PaddleUp | Pickleball in Iligan</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,6 +27,7 @@
             color: #172018;
             line-height: 1.6;
         }
+
 
         /* HEADER */
 
@@ -54,6 +59,7 @@
         nav a:hover {
             color: #f5c542;
         }
+
 
         /* HERO */
 
@@ -91,6 +97,9 @@
             color: #f1f5ef;
         }
 
+
+        /* BUTTON */
+
         .button {
             display: inline-block;
             background: #f5c542;
@@ -107,6 +116,7 @@
             background: #ffd866;
             transform: translateY(-2px);
         }
+
 
         /* SECTIONS */
 
@@ -126,6 +136,7 @@
             margin: 0 auto 45px;
             color: #5b635d;
         }
+
 
         /* CARDS */
 
@@ -167,6 +178,7 @@
             color: #606860;
         }
 
+
         /* PRICING */
 
         .pricing {
@@ -194,6 +206,7 @@
             margin-bottom: 25px;
         }
 
+
         /* BOOKING */
 
         .booking {
@@ -211,6 +224,48 @@
             color: #dce7df;
         }
 
+        .booking-form {
+            max-width: 550px;
+            margin: 35px auto 0;
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .booking-form label {
+            display: block;
+            color: #123c2a;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 20px;
+            border: 1px solid #d5dcd6;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: #2d704d;
+            box-shadow: 0 0 0 3px rgba(45,112,77,0.15);
+        }
+
+        .booking-form button {
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+
         /* FOOTER */
 
         footer {
@@ -220,6 +275,7 @@
             padding: 25px;
             font-size: 14px;
         }
+
 
         /* MOBILE */
 
@@ -261,11 +317,20 @@
                 width: 100%;
                 max-width: 350px;
             }
+
+            .booking-form {
+                padding: 25px;
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- HEADER -->
 
@@ -276,9 +341,19 @@
         </div>
 
         <nav>
-            <a href="#about">About</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#booking">Book</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#pricing">
+                Pricing
+            </a>
+
+            <a href="#booking">
+                Book
+            </a>
+
         </nav>
 
     </header>
@@ -322,6 +397,7 @@
 
 
         <div class="cards">
+
 
             <div class="card">
 
@@ -376,6 +452,7 @@
 
             </div>
 
+
         </div>
 
     </section>
@@ -419,22 +496,21 @@
 
     <!-- BOOKING -->
 
-   <!-- BOOKING -->
+    <section class="section booking" id="booking">
 
-<section class="section booking" id="booking">
+        <h2>
+            Book a Court
+        </h2>
 
-    <h2>
-        Book a Court
-    </h2>
+        <p>
+            Choose your date, court, and time.
+            Court rental is ₱350 per hour.
+        </p>
 
-    <p>
-        Choose your date, court, and time.
-        Court rental is ₱350 per hour.
-    </p>
 
-    <form class="booking-form">
+        <form class="booking-form">
 
-        <div class="form-group">
+
             <label for="name">
                 Full Name
             </label>
@@ -442,14 +518,11 @@
             <input
                 type="text"
                 id="name"
-                name="name"
                 placeholder="Enter your full name"
                 required
             >
-        </div>
 
 
-        <div class="form-group">
             <label for="phone">
                 Contact Number
             </label>
@@ -457,14 +530,11 @@
             <input
                 type="tel"
                 id="phone"
-                name="phone"
                 placeholder="09XX XXX XXXX"
                 required
             >
-        </div>
 
 
-        <div class="form-group">
             <label for="date">
                 Date
             </label>
@@ -472,117 +542,116 @@
             <input
                 type="date"
                 id="date"
-                name="date"
                 required
             >
-        </div>
 
 
-        <div class="form-group">
             <label for="court">
                 Choose a Court
             </label>
 
-            <select id="court" name="court" required>
+            <select id="court" required>
 
                 <option value="">
                     Select a court
                 </option>
 
-                <option value="Court 1">
+                <option>
                     Court 1
                 </option>
 
-                <option value="Court 2">
+                <option>
                     Court 2
                 </option>
 
-                <option value="Court 3">
+                <option>
                     Court 3
                 </option>
 
-                <option value="Court 4">
+                <option>
                     Court 4
                 </option>
 
-                <option value="Court 5">
+                <option>
                     Court 5
                 </option>
 
             </select>
-        </div>
 
 
-        <div class="form-group">
             <label for="time">
                 Choose a Time
             </label>
 
-            <select id="time" name="time" required>
+            <select id="time" required>
 
                 <option value="">
                     Select a time
                 </option>
 
-                <option value="8:00 AM - 9:00 AM">
+                <option>
                     8:00 AM - 9:00 AM
                 </option>
 
-                <option value="9:00 AM - 10:00 AM">
+                <option>
                     9:00 AM - 10:00 AM
                 </option>
 
-                <option value="10:00 AM - 11:00 AM">
+                <option>
                     10:00 AM - 11:00 AM
                 </option>
 
-                <option value="11:00 AM - 12:00 PM">
+                <option>
                     11:00 AM - 12:00 PM
                 </option>
 
-                <option value="12:00 PM - 1:00 PM">
+                <option>
                     12:00 PM - 1:00 PM
                 </option>
 
-                <option value="1:00 PM - 2:00 PM">
+                <option>
                     1:00 PM - 2:00 PM
                 </option>
 
-                <option value="2:00 PM - 3:00 PM">
+                <option>
                     2:00 PM - 3:00 PM
                 </option>
 
-                <option value="3:00 PM - 4:00 PM">
+                <option>
                     3:00 PM - 4:00 PM
                 </option>
 
-                <option value="4:00 PM - 5:00 PM">
+                <option>
                     4:00 PM - 5:00 PM
                 </option>
 
-                <option value="5:00 PM - 6:00 PM">
+                <option>
                     5:00 PM - 6:00 PM
                 </option>
 
-                <option value="6:00 PM - 7:00 PM">
+                <option>
                     6:00 PM - 7:00 PM
                 </option>
 
-                <option value="7:00 PM - 8:00 PM">
+                <option>
                     7:00 PM - 8:00 PM
                 </option>
 
             </select>
-        </div>
 
 
-        <button type="submit" class="button">
-            Reserve Court
-        </button>
+            <button
+                type="submit"
+                class="button"
+            >
+                Reserve Court
+            </button>
 
-    </form>
 
-</section>
+        </form>
+
+    </section>
+
 
     <!-- FOOTER -->
 
@@ -594,5 +663,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
