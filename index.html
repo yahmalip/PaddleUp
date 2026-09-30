@@ -266,6 +266,44 @@
         }
 
 
+        /* CONFIRMATION */
+
+        .confirmation {
+            display: none;
+            max-width: 550px;
+            margin: 30px auto 0;
+            background: white;
+            color: #172018;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .confirmation h3 {
+            color: #123c2a;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation p {
+            color: #172018;
+            margin: 8px 0;
+        }
+
+        .confirmation .success {
+            color: #2d704d;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .new-booking {
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+
+
         /* FOOTER */
 
         footer {
@@ -318,7 +356,8 @@
                 max-width: 350px;
             }
 
-            .booking-form {
+            .booking-form,
+            .confirmation {
                 padding: 25px;
             }
 
@@ -508,7 +547,7 @@
         </p>
 
 
-        <form class="booking-form">
+        <form class="booking-form" id="bookingForm">
 
 
             <label for="name">
@@ -650,6 +689,59 @@
 
         </form>
 
+
+        <!-- CONFIRMATION -->
+
+        <div class="confirmation" id="confirmation">
+
+            <h3>
+                🎉 Reservation Request
+            </h3>
+
+            <p class="success">
+                Your reservation details have been recorded.
+            </p>
+
+            <p>
+                <strong>Name:</strong>
+                <span id="confirmName"></span>
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                <span id="confirmPhone"></span>
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                <span id="confirmDate"></span>
+            </p>
+
+            <p>
+                <strong>Court:</strong>
+                <span id="confirmCourt"></span>
+            </p>
+
+            <p>
+                <strong>Time:</strong>
+                <span id="confirmTime"></span>
+            </p>
+
+            <p>
+                <strong>Total:</strong>
+                ₱350
+            </p>
+
+            <button
+                class="button new-booking"
+                id="newBooking"
+            >
+                Make Another Reservation
+            </button>
+
+        </div>
+
+
     </section>
 
 
@@ -662,6 +754,75 @@
         </p>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const bookingForm = document.getElementById("bookingForm");
+
+        const confirmation = document.getElementById("confirmation");
+
+        const newBooking = document.getElementById("newBooking");
+
+
+        bookingForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const name = document.getElementById("name").value;
+
+            const phone = document.getElementById("phone").value;
+
+            const date = document.getElementById("date").value;
+
+            const court = document.getElementById("court").value;
+
+            const time = document.getElementById("time").value;
+
+
+            document.getElementById("confirmName").textContent = name;
+
+            document.getElementById("confirmPhone").textContent = phone;
+
+            document.getElementById("confirmDate").textContent = date;
+
+            document.getElementById("confirmCourt").textContent = court;
+
+            document.getElementById("confirmTime").textContent = time;
+
+
+            bookingForm.style.display = "none";
+
+            confirmation.style.display = "block";
+
+
+            confirmation.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        });
+
+
+        newBooking.addEventListener("click", function() {
+
+            bookingForm.reset();
+
+            confirmation.style.display = "none";
+
+            bookingForm.style.display = "block";
+
+            bookingForm.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        });
+
+    </script>
 
 
 </body>
