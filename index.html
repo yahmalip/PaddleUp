@@ -419,24 +419,170 @@
 
     <!-- BOOKING -->
 
-    <section class="section booking" id="booking">
+   <!-- BOOKING -->
 
-        <h2>
-            Ready to Play?
-        </h2>
+<section class="section booking" id="booking">
 
-        <p>
-            Online court booking is coming soon.
-            Soon you'll be able to choose your date,
-            court, and time directly through PaddleUp.
-        </p>
+    <h2>
+        Book a Court
+    </h2>
 
-        <a href="#" class="button">
-            Book a Court
-        </a>
+    <p>
+        Choose your date, court, and time.
+        Court rental is ₱350 per hour.
+    </p>
 
-    </section>
+    <form class="booking-form">
 
+        <div class="form-group">
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="phone">
+                Contact Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="09XX XXX XXXX"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="date">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="court">
+                Choose a Court
+            </label>
+
+            <select id="court" name="court" required>
+
+                <option value="">
+                    Select a court
+                </option>
+
+                <option value="Court 1">
+                    Court 1
+                </option>
+
+                <option value="Court 2">
+                    Court 2
+                </option>
+
+                <option value="Court 3">
+                    Court 3
+                </option>
+
+                <option value="Court 4">
+                    Court 4
+                </option>
+
+                <option value="Court 5">
+                    Court 5
+                </option>
+
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="time">
+                Choose a Time
+            </label>
+
+            <select id="time" name="time" required>
+
+                <option value="">
+                    Select a time
+                </option>
+
+                <option value="8:00 AM - 9:00 AM">
+                    8:00 AM - 9:00 AM
+                </option>
+
+                <option value="9:00 AM - 10:00 AM">
+                    9:00 AM - 10:00 AM
+                </option>
+
+                <option value="10:00 AM - 11:00 AM">
+                    10:00 AM - 11:00 AM
+                </option>
+
+                <option value="11:00 AM - 12:00 PM">
+                    11:00 AM - 12:00 PM
+                </option>
+
+                <option value="12:00 PM - 1:00 PM">
+                    12:00 PM - 1:00 PM
+                </option>
+
+                <option value="1:00 PM - 2:00 PM">
+                    1:00 PM - 2:00 PM
+                </option>
+
+                <option value="2:00 PM - 3:00 PM">
+                    2:00 PM - 3:00 PM
+                </option>
+
+                <option value="3:00 PM - 4:00 PM">
+                    3:00 PM - 4:00 PM
+                </option>
+
+                <option value="4:00 PM - 5:00 PM">
+                    4:00 PM - 5:00 PM
+                </option>
+
+                <option value="5:00 PM - 6:00 PM">
+                    5:00 PM - 6:00 PM
+                </option>
+
+                <option value="6:00 PM - 7:00 PM">
+                    6:00 PM - 7:00 PM
+                </option>
+
+                <option value="7:00 PM - 8:00 PM">
+                    7:00 PM - 8:00 PM
+                </option>
+
+            </select>
+        </div>
+
+
+        <button type="submit" class="button">
+            Reserve Court
+        </button>
+
+    </form>
+
+</section>
 
     <!-- FOOTER -->
 
